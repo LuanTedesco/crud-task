@@ -8,7 +8,7 @@ A atividade consiste na criação de um aplicativo CRUD utilizando a linguagem d
 
 ## Instalação
 
-Siga estas etapas para configurar e executar o projeto localmente em sua máquina:
+Tendo a versão ruby 3.1.2 instalada, siga estas etapas para configurar e executar o projeto localmente em sua máquina:
 
 1. Clone o repositório para sua máquina local:
 
