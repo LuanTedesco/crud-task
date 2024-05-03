@@ -11,6 +11,8 @@ class TasksController < ApplicationController
     if params[:finished].present?
       @tasks = @tasks.where(finished: params[:finished])
     end
+
+    @tasks = @tasks.order(created_at: :desc)
   end
 
   def show
@@ -39,6 +41,12 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
 
+    redirect_to tasks_path
+  end
+
+  def toggle_finished
+    @task = Task.find(params[:id])
+    @task.update(finished: !@task.finished)
     redirect_to tasks_path
   end
 
