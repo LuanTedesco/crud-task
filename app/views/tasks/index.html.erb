@@ -13,18 +13,22 @@
           <table class="table">
             <thead>
               <tr>
+                <th class="small"></th>
                 <th class="small">Title</th>
                 <th class="small">Description</th>
-                <th class="small">Finished</th>
                 <th style="min-width: 120px;"></th>
               </tr>
             </thead>
             <tbody>
               <% @tasks.each do |task| %>
                 <tr>
+                  <td>
+                    <%= form_with(model: task, method: :patch, url: toggle_finished_task_path(task)) do |f| %>
+                      <%= f.check_box :finished, class: 'checkbox-toggle form-check-input ml-2', onchange: 'this.form.submit()' %>
+                    <% end %>
+                  </td>
                   <td class="text-truncate" style="max-width: 200px;"><%= task.title %></td>
                   <td class="text-truncate" style="max-width: 400px;"><%= task.description %></td>
-                  <td><%= task.finished ? 'Finished' : 'Not Finished' %></td>
                   <td class="text-end">
                     <%= link_to "Show", task_path(task), method: :get, class: "btn btn-outline-primary btn-sm" %>
                     <%= link_to "Edit", edit_task_path(task), method: :get, class: "btn btn-outline-warning btn-sm ms-2" %>
