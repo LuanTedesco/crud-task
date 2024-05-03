@@ -1,14 +1,43 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Tasks</h1>
-
-<div id="tasks">
-  <% @tasks.each do |task| %>
-    <%= render task %>
-    <p>
-      <%= link_to "Show this task", task %>
-    </p>
-  <% end %>
+<div class="container">
+  <div class="row mx-2">
+    <div class="col-md-3">
+      <div class="mt-4">
+        <%= link_to "New Task", new_task_path, method: :get, class: "btn btn-outline-primary btn-sm" %>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-2">
+    <div class="col-md-12">
+      <div class="mt-4">
+        <% if @tasks.any? %>
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="small">Title</th>
+                <th class="small">Description</th>
+                <th class="small">Finished</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @tasks.each do |task| %>
+                <tr>
+                  <td><%= task.title %></td>
+                  <td><%= task.description %></td>
+                  <td><%= task.finished ? 'Finished' : 'Not Finished' %></td>
+                  <td class="text-end">
+                    <%= link_to "Show", task_path(task), method: :get, class: "btn btn-outline-primary btn-sm" %>
+                    <%= link_to "Edit", edit_task_path(task), method: :get, class: "btn btn-outline-warning btn-sm ms-2" %>
+                    <%= button_to "Delete", task, method: :delete, class: "btn btn-outline-danger btn-sm ms-2", form: { class: "d-inline" } %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          <p>No tasks available</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New task", new_task_path %>

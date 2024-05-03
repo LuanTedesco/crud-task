@@ -1,17 +1,9 @@
-<div id="<%= dom_id task %>">
-  <p>
-    <strong>Title:</strong>
-    <%= task.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= task.description %>
-  </p>
-
-  <p>
-    <strong>Status:</strong>
-    <%= task.status %>
-  </p>
-
+<div id="<%= dom_id task %>" class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title"><strong>Title:</strong> <%= task.title %></h5>
+    <hr class="divider">
+    <p class="card-text"><strong>Description:</strong> <%= task.description %></p>
+    <hr class="divider">
+    <p class="card-text"><strong>Finished:</strong> <%= task.finished ? 'Finished' : 'Not Finished' %></p>
+  </div>
 </div>
