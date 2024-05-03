@@ -16,14 +16,14 @@
                 <th class="small">Title</th>
                 <th class="small">Description</th>
                 <th class="small">Finished</th>
-                <th></th>
+                <th style="min-width: 120px;"></th>
               </tr>
             </thead>
             <tbody>
               <% @tasks.each do |task| %>
                 <tr>
-                  <td><%= task.title %></td>
-                  <td><%= task.description %></td>
+                  <td class="text-truncate" style="max-width: 200px;"><%= task.title %></td>
+                  <td class="text-truncate" style="max-width: 400px;"><%= task.description %></td>
                   <td><%= task.finished ? 'Finished' : 'Not Finished' %></td>
                   <td class="text-end">
                     <%= link_to "Show", task_path(task), method: :get, class: "btn btn-outline-primary btn-sm" %>
