@@ -25,13 +25,13 @@ Task.create!(
 Task.create!(
   title: "Fazer exercícios físicos",
   description: "Ir à academia e fazer uma sessão de treino de cardio e musculação.",
-  finished: false,
+  finished: true,
 )
 
 Task.create!(
   title: "Revisar relatório mensal",
   description: "Revisar e finalizar o relatório mensal de desempenho da equipe.",
-  finished: false,
+  finished: true,
 )
 
 Task.create!(
@@ -49,12 +49,72 @@ Task.create!(
 Task.create!(
   title: "Ler livro novo",
   description: "Começar a leitura do novo livro de ficção recomendado por um amigo.",
-  finished: false,
+  finished: true,
 )
 
 Task.create!(
   title: "Fazer backup dos arquivos",
   description: "Realizar backup dos arquivos importantes no disco rígido externo.",
+  finished: false,
+)
+
+Task.create!(
+  title: "Comprar presente de aniversário",
+  description: "Escolher e comprar um presente para o aniversário do amigo no próximo sábado.",
+  finished: false,
+)
+
+Task.create!(
+  title: "Consertar vazamento na pia da cozinha",
+  description: "Chamar o encanador para consertar o vazamento na pia da cozinha o mais rápido possível.",
+  finished: true,
+)
+
+Task.create!(
+  title: "Atualizar currículo",
+  description: "Atualizar o currículo com as últimas experiências profissionais e habilidades adquiridas.",
+  finished: false,
+)
+
+Task.create!(
+  title: "Assistir ao webinar sobre marketing digital",
+  description: "Participar do webinar online sobre estratégias de marketing digital na próxima quinta-feira.",
+  finished: false,
+)
+
+Task.create!(
+  title: "Enviar relatório de despesas",
+  description: "Enviar o relatório de despesas do mês para o departamento financeiro até o final do dia.",
+  finished: true,
+)
+
+Task.create!(
+  title: "Planejar férias",
+  description: "Começar a planejar as férias de verão e pesquisar destinos e opções de hospedagem.",
+  finished: false,
+)
+
+Task.create!(
+  title: "Limpar o quintal",
+  description: "Limpar folhas e galhos caídos no quintal e aparar a grama.",
+  finished: true,
+)
+
+Task.create!(
+  title: "Fazer check-up do carro",
+  description: "Agendar uma revisão completa do carro na oficina para garantir que tudo esteja em ordem.",
+  finished: false,
+)
+
+Task.create!(
+  title: "Enviar convites para a festa",
+  description: "Preparar e enviar os convites para a festa de aniversário no próximo mês.",
+  finished: true,
+)
+
+Task.create!(
+  title: "Praticar meditação",
+  description: "Dedicar 10 minutos diários à prática de meditação para relaxar e reduzir o estresse.",
   finished: false,
 )
 
