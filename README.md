@@ -1,24 +1,46 @@
-# README
+# CRUD Application - Avaliação 3 - DESENVOLVIMENTO WEB - EAD54-12
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este projeto é uma atividade avaliativa do componente curricular, onde será desenvolvido um CRUD (Create, Read, Update, Delete) em uma temática livre.
 
-Things you may want to cover:
+## Descrição
 
-* Ruby version
+A atividade consiste na criação de um aplicativo CRUD utilizando a linguagem de programação Ruby on Rails e um banco de dados Postgresql para gerenciar tarefas. O aplicativo permitirá que os usuários criem, visualizem, editem e excluam tarefas de uma lista.
 
-* System dependencies
+## Instalação
 
-* Configuration
+Siga estas etapas para configurar e executar o projeto localmente em sua máquina:
 
-* Database creation
+1. Clone o repositório para sua máquina local:
 
-* Database initialization
+`git clone https://github.com/LuanTedesco/crud-task`
 
-* How to run the test suite
+2. Navegue até o diretório do projeto:
 
-* Services (job queues, cache servers, search engines, etc.)
+`cd crud-task`
 
-* Deployment instructions
+3. Instale as dependências do Ruby utilizando o Bundler:
 
-* ...
+`bundle install`
+
+4. Crie o banco de dados e execute as migrações:
+
+`rails db:create`
+`rails db:migrate`
+
+5. (Opcional) Carregue os registros iniciais no banco de dados:
+
+`rails db:seed`
+
+6. Inicie o servidor Rails:
+
+`rails server`
+
+7. Abra um navegador da web e acesse `http://localhost:3000` para visualizar o aplicativo.
+
+## Funcionalidades
+
+- Criação de novas tarefas.
+- Visualização da lista de tarefas.
+- Visualização da tarefa.
+- Edição de tarefas existentes.
+- Exclusão de tarefas.
